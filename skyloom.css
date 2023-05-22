@@ -45,6 +45,7 @@ body {
   margin-top: -2.1875rem;
   background-position: center;
   height: 100vh;
+  width: 100vw;
   object-fit: cover;
 }
 
@@ -55,8 +56,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 28px;
-  padding-right: 3.75rem;
+  padding-right: 2.75rem;
 }
 
 .first_page .logo {
@@ -77,14 +77,15 @@ body {
 .hero .tagline {
   position: absolute;
   top: 17.5rem;
-  left: 4.375rem;
-  left: 4.5%;
-  width: 50rem;
+  left: 2rem;
+  max-width: 50%;
+  z-index: 1000;
 }
+
 
 .tagline .tagline_quote {
   color: white;
-  font-size: 3.5625rem;
+  font-size: 2.6vw;
   text-transform: uppercase;
   font-family: var(--primary-font), sans-serif;
   line-height: 3.4375rem;
@@ -92,7 +93,7 @@ body {
 
 .tagline .second_tagline {
   color: white;
-  font-size: 1.5625rem;
+  font-size: 1.5vw;
   margin-top: 0.3125rem;
   letter-spacing: 0.0625rem;
   word-spacing: 0.3125rem;
@@ -107,8 +108,9 @@ body {
 }
 
 .hanging_image_section .hanging_img {
-  height: 900px;
+  height: 800px;
 }
+
 .mouse-icon {
   position: absolute;
   right: 4.375rem;
@@ -123,7 +125,7 @@ body {
 }
 
 .our_work .our_work_title {
-  margin-left: 4.375rem;
+  margin-left: 2rem;
   width: 200px;
   user-select: none;
 }
@@ -143,14 +145,33 @@ body {
 }
 
 .main_section_block_width {
-  width: 1380px;
+  width: 100%;
 }
+
 /* Clients */
 .landing_page .clients {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  /* margin-top: 40px; */
+  justify-content: center;
+  padding: 40px;
+}
+
+.clients .clientlist {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 15px;
+  column-gap: 80px;
+}
+
+#clients_line,
+#partner_line,
+#letstalk_line,
+#service_line {
+  width: 100vw;
+}
+.title{
+  margin-right:30px;
 }
 
 .clients .title_row,
@@ -160,7 +181,7 @@ body {
   user-select: none;
   font-family: var(--primary-font), sans-serif;
   text-transform: uppercase;
-  font-size: 3.75rem;
+  font-size: 3.75vw;
   color: var(--bluish-color);
   display: flex;
   align-items: center;
@@ -175,34 +196,14 @@ body {
   border-radius: 0.125rem;
   background-color: var(--bluish-color);
 }
-#partner_line {
-  width: 790px;
-}
-#clients_line {
-  width: 990px;
-}
-
-#service_line {
-  width: 900px;
-}
-
-#letstalk_line {
-  width: 960px;
-}
-
-.clients .clientlist {
-  /* margin-top: 40px; */
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  row-gap: 15px;
-  column-gap: 135px;
-}
 
 /* Services  */
 .div_center {
   display: flex;
   justify-content: center;
+}
+.services{
+  padding:40px;
 }
 .services .services_block {
   margin-top: 160px;
@@ -243,7 +244,7 @@ body {
 
 .service_body .service_title {
   font-family: var(--primary-font), sans-serif;
-  font-size: 2rem;
+  font-size: 2.2vw;
   color: white;
 }
 
@@ -251,13 +252,17 @@ body {
   font-family: "inter", sans-serif;
 }
 
+
 /* Partners */
+.partnerships{
+  padding:40px;
+}
 .landing_page .partners {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   row-gap: 2.5rem;
-  column-gap: 240px;
+  column-gap: 7vw;
   height: 18.125rem;
 }
 
@@ -265,11 +270,101 @@ body {
 .partners_logo {
   height: 6.25rem;
 }
+
+@media screen and (max-width: 768px) {
+
+  .tagline .tagline_quote {
+    font-size: 1.6rem;
+    text-align: left;
+    line-height: 2.5rem;
+  }
+
+  .hanging_image_section .hanging_img {
+    height: 400px;
+  }
+
+  .hero .hanging_image_section {
+    top: 22%;
+  }
+
+  .clients .clientlist {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 15px;
+    column-gap: 20px;
+  }
+
+  .client_logo {
+    width: 110px;
+  }
+  .partners_logo {
+    width: 100px;
+  }
+
+  .services .services_block {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: 50px;
+  }
+  .landing_page .partners {
+    column-gap: 5vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services .services_block {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 120px;
+    column-gap: 0px;
+  }
+  .partners_logo {
+    width: 120px;
+  }
+  .landing_page .partners {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hanging_image_section .hanging_img {
+    height: 600px;
+  }
+
+  .hero .hanging_image_section {
+    top: 11%;
+  }
+
+  .clients .clientlist {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 40px;
+    row-gap: 15px;
+  }
+
+  .services .services_block {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 50px;
+    column-gap: 100px;
+  }
+  .partners_logo{
+    width:100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .clients .clientlist {
+    column-gap: 40px;
+  }
+}
 /* Let's Talk  */
 .lets_talk {
   display: block;
   position: relative;
   user-select: none;
+  padding:40px;
 }
 .lets_talk .footer_img {
   width: 100vw;
@@ -450,17 +545,9 @@ form #submit_btn {
 }
 
 .all_title_width {
-  width: 1380px;
-}
-
-.all_title_width_wrapper {
   display: flex;
-  justify-content: center;
-}
-
-.our_work_title {
-  margin-left: 70px;
-}
+  justify-content: start;
+} 
 
 .hero_body {
   width: 100%;
