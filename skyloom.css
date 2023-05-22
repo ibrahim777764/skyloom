@@ -93,7 +93,7 @@ body {
 
 .tagline .second_tagline {
   color: white;
-  font-size: 1.5vw;
+  font-size: 2.0vw;
   margin-top: 0.3125rem;
   letter-spacing: 0.0625rem;
   word-spacing: 0.3125rem;
@@ -164,16 +164,6 @@ body {
   column-gap: 80px;
 }
 
-#clients_line,
-#partner_line,
-#letstalk_line,
-#service_line {
-  width: 100vw;
-}
-.title{
-  margin-right:30px;
-}
-
 .clients .title_row,
 .services .title_row,
 .partnerships .title_row,
@@ -185,16 +175,6 @@ body {
   color: var(--bluish-color);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.clients .line,
-.services .line,
-.partnerships .line,
-.footer_title .line {
-  height: 0.5rem;
-  border-radius: 0.125rem;
-  background-color: var(--bluish-color);
 }
 
 /* Services  */
@@ -271,99 +251,24 @@ body {
   height: 6.25rem;
 }
 
-@media screen and (max-width: 768px) {
 
-  .tagline .tagline_quote {
-    font-size: 1.6rem;
-    text-align: left;
-    line-height: 2.5rem;
-  }
-
-  .hanging_image_section .hanging_img {
-    height: 400px;
-  }
-
-  .hero .hanging_image_section {
-    top: 22%;
-  }
-
-  .clients .clientlist {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    row-gap: 15px;
-    column-gap: 20px;
-  }
-
-  .client_logo {
-    width: 110px;
-  }
-  .partners_logo {
-    width: 100px;
-  }
-
-  .services .services_block {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    column-gap: 50px;
-  }
-  .landing_page .partners {
-    column-gap: 5vw;
-  }
+.title {
+  margin-right: 30px;
 }
 
-@media screen and (max-width: 480px) {
-  .services .services_block {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    row-gap: 120px;
-    column-gap: 0px;
-  }
-  .partners_logo {
-    width: 120px;
-  }
-  .landing_page .partners {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .hanging_image_section .hanging_img {
-    height: 600px;
-  }
-
-  .hero .hanging_image_section {
-    top: 11%;
-  }
-
-  .clients .clientlist {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    column-gap: 40px;
-    row-gap: 15px;
-  }
-
-  .services .services_block {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    row-gap: 50px;
-    column-gap: 100px;
-  }
-  .partners_logo{
-    width:100px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .clients .clientlist {
-    column-gap: 40px;
-  }
+ .line {
+  width: 100vw;
+  height: 0.5rem;
+  border-radius: 0.125rem;
+  background-color: var(--bluish-color);
 }
 /* Let's Talk  */
 .lets_talk {
   display: block;
   position: relative;
   user-select: none;
+}
+.lets_talk_padding{
   padding:40px;
 }
 .lets_talk .footer_img {
@@ -375,41 +280,39 @@ body {
 }
 
 .lets_talk .footer_title {
-  display: flex;
-  justify-content: space-between;
   position: absolute;
   top: 60px;
+  right:40px;
+  left:40px;
 }
 
 .lets_talk .footer_top {
   position: absolute;
-  top: 15.625rem;
+  top: 17.625rem;
   height: fit-content;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: start;
   z-index: 11111;
 }
 
 .footer_top .lets_talk_img {
   margin-left: 0;
+  margin-top:10px;
   height: 31.25rem;
   aspect-ratio: 1/1;
   object-fit: cover;
+  width: 35vw;
+  height:35vw
 }
 
 .footer_top form {
   position: relative;
-  width: 37.5rem;
+  width: 47.5vw;
   height: 18.75rem;
-  margin-right: 82px;
-  margin-top: 100px;
 }
 
-.each_from_section {
-  margin-top: 0.5rem;
-}
 
 .each_from_section label {
   color: white;
@@ -466,9 +369,9 @@ form #submit_btn {
   position: relative;
   margin-top: 752px;
   height: 18.75rem;
-  width: 1332px;
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .footer .footer_divs {
@@ -481,7 +384,7 @@ form #submit_btn {
 .footer_divs .footer_div_title {
   font-family: var(--primary-font), sans-serif;
   color: var(--bluish-color);
-  font-size: 2.5rem;
+  font-size: 2.5vw;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -489,13 +392,13 @@ form #submit_btn {
 .footer_divs .each_contact {
   display: flex;
   height: 4.375rem;
-  width: 15.625rem;
   align-items: center;
   margin-bottom: 10px;
 }
 
 .each_contact .footer_icon {
-  height: 2.5em;
+  height: 40px;
+  width:40px;
 }
 
 .contact_text,
@@ -504,12 +407,124 @@ form #submit_btn {
   font-weight: lighter;
 }
 
+.contact_text{
+  font-size:20px;
+}
 .footer_divs > .footer_text {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 20px;
   height: 2.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .services .services_block {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 120px;
+    column-gap: 0px;
+  }
+
+  .partners_logo {
+    width: 120px;
+  }
+
+  .landing_page .partners {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+ .contact_text,
+ .footer_divs>.footer_text {
+   font-size: 3vw;
+ }
+ .each_contact .footer_icon {
+   height: 20px;
+   width: 20px;
+ }
+}
+
+@media screen and (max-width: 768px) {
+
+  .tagline .tagline_quote {
+    font-size: 1.6rem;
+    text-align: left;
+    line-height: 2.5rem;
+  }
+
+  .hanging_image_section .hanging_img {
+    height: 800px;
+    width:600px;
+  }
+
+  .clients .clientlist {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 15px;
+    column-gap: 20px;
+  }
+
+  .client_logo {
+    width: 110px;
+  }
+
+  .partners_logo {
+    width: 100px;
+  }
+
+  .services .services_block {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: 50px;
+  }
+
+  .landing_page .partners {
+    column-gap: 5vw;
+  }
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hanging_image_section .hanging_img {
+    height: 600px;
+  }
+
+  .hero .hanging_image_section {
+    top: 11%;
+  }
+
+  .clients .clientlist {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 40px;
+    row-gap: 15px;
+  }
+
+  .services .services_block {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 50px;
+    column-gap: 100px;
+  }
+
+  .partners_logo {
+    width: 100px;
+  }
+
+  /* .footer_divs>.footer_text {
+    font-size: 15px;
+    height: 2.5rem;
+  } */
+}
+
+@media screen and (min-width: 1024px) {
+  .clients .clientlist {
+    column-gap: 40px;
+  }
+}
+
+.each_from_section {
+  margin-top: 0.5rem;
 }
 
 .bottom_footer {
